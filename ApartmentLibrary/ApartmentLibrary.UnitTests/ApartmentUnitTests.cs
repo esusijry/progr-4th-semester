@@ -9,7 +9,7 @@ namespace ApartmentLibrary.UnitTests
             var ap = CreateTestApartment();
 
             Assert.That(ap.Number, Is.EqualTo(10));
-            Assert.That(ap.OwnerName, Is.EqualTo("Иван Иванов"));
+            Assert.That(ap.OwnerName, Is.EqualTo("РРІР°РЅ РРІР°РЅРѕРІ"));
             Assert.That(ap.PhoneNumber, Is.EqualTo("123456"));
             Assert.That(ap.ElectricityType, Is.EqualTo(ElectricityMeterType.DualTariff));
         }
@@ -21,16 +21,16 @@ namespace ApartmentLibrary.UnitTests
             var info = ap.GetInfo();
 
             Assert.That(info.Length, Is.EqualTo(2));
-            Assert.That(info[0], Is.EqualTo("Квартира №10, Иван Иванов"));
+            Assert.That(info[0], Is.EqualTo("РљРІР°СЂС‚РёСЂР° 10, РРІР°РЅ РРІР°РЅРѕРІ"));
             Assert.That(info[1],
-                Is.EqualTo("Телефон: 123456, ХВС: 100, ГВС: 50, День: 200, Ночь: 150"));
+                Is.EqualTo("РўРµР»РµС„РѕРЅ: 123456, РҐР’РЎ: 100, Р“Р’РЎ: 50, Р”РµРЅСЊ: 200, РќРѕС‡СЊ: 150"));
         }
 
         private Apartment CreateTestApartment()
         {
             return new Apartment(
                 10,
-                "Иван Иванов",
+                "РРІР°РЅ РРІР°РЅРѕРІ",
                 "123456",
                 100,
                 50,

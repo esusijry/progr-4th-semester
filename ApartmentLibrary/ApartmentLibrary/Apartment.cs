@@ -38,7 +38,7 @@ namespace ApartmentLibrary
         {
             var info = new string[2];
 
-            info[0] = $"Квартира №{Number}, {OwnerName}";
+            info[0] = $"Квартира {Number}, {OwnerName}";
 
             if (ElectricityType == ElectricityMeterType.SingleTariff)
                 info[1] = $"Телефон: {PhoneNumber}, ХВС: {ColdWater}, ГВС: {HotWater}, Эл-во: {ElectricityReadings[0]}";
